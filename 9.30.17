@@ -1,4 +1,5 @@
 Notes from Active Record Videos
+https://learn.co/tracks/full-stack-web-development-v3/orms-and-activerecord/associations/activerecord-associations-video-review
 
 Objects do not know about SQL they know about methods.
 
