@@ -33,3 +33,63 @@ reload_author
 
 
 has_many
+
+http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html
+
+
+has_many(name, scope = nil, options = {}, &extension) Link
+Specifies a one-to-many association. The following methods for retrieval and query of collections of associated objects will be added:
+
+collection is a placeholder for the symbol passed as the name argument, so has_many :clients would add among others clients.empty?.
+
+collection(force_reload = false)
+Returns a Relation of all the associated objects. An empty Relation is returned if none are found.
+
+collection<<(object, …)
+Adds one or more objects to the collection by setting their foreign keys to the collection's primary key. Note that this operation instantly fires update SQL without waiting for the save or update call on the parent object, unless the parent object is a new record. This will also run validations and callbacks of associated object(s).
+
+collection.delete(object, …)
+Removes one or more objects from the collection by setting their foreign keys to NULL. Objects will be in addition destroyed if they're associated with dependent: :destroy, and deleted if they're associated with dependent: :delete_all.
+
+If the :through option is used, then the join records are deleted (rather than nullified) by default, but you can specify dependent: :destroy or dependent: :nullify to override this.
+
+collection.destroy(object, …)
+Removes one or more objects from the collection by running destroy on each record, regardless of any dependent option, ensuring callbacks are run.
+
+If the :through option is used, then the join records are destroyed instead, not the objects themselves.
+
+collection=objects
+Replaces the collections content by deleting and adding objects as appropriate. If the :through option is true callbacks in the join models are triggered except destroy callbacks, since deletion is direct by default. You can specify dependent: :destroy or dependent: :nullify to override this.
+
+collection_singular_ids
+Returns an array of the associated objects' ids
+
+collection_singular_ids=ids
+Replace the collection with the objects identified by the primary keys in ids. This method loads the models and calls collection=. See above.
+
+collection.clear
+Removes every object from the collection. This destroys the associated objects if they are associated with dependent: :destroy, deletes them directly from the database if dependent: :delete_all, otherwise sets their foreign keys to NULL. If the :through option is true no destroy callbacks are invoked on the join models. Join models are directly deleted.
+
+collection.empty?
+Returns true if there are no associated objects.
+
+collection.size
+Returns the number of associated objects.
+
+collection.find(…)
+Finds an associated object according to the same rules as ActiveRecord::FinderMethods#find.
+
+collection.exists?(…)
+Checks whether an associated object with the given conditions exists. Uses the same rules as ActiveRecord::FinderMethods#exists?.
+
+collection.build(attributes = {}, …)
+Returns one or more new objects of the collection type that have been instantiated with attributes and linked to this object through a foreign key, but have not yet been saved.
+
+collection.create(attributes = {})
+Returns a new object of the collection type that has been instantiated with attributes, linked to this object through a foreign key, and that has already been saved (if it passed the validation). Note: This only works if the base model already exists in the DB, not if it is a new (unsaved) record!
+
+collection.create!(attributes = {})
+Does the same as collection.create, but raises ActiveRecord::RecordInvalid if the record is invalid.
+
+collection.reload
+Returns a Relation of all of the associated objects, forcing a database read. An empty Relation is returned if none are found.
