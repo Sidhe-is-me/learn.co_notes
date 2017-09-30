@@ -23,8 +23,8 @@ class Book < ApplicationRecord
 end
 Each instance of the Book model will have these methods:
 
-author
-author=
+author [association reader]
+author= [association writer]
 build_author
 create_author
 create_author!
