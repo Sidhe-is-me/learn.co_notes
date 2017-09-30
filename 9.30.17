@@ -1,4 +1,7 @@
 Notes from Active Record Videos
+WHEN AN OBJECT BELONGS TO ANOTHER OBJECT IT ALWAYS HAS THE FOREIGN KEY
+
+
 https://learn.co/tracks/full-stack-web-development-v3/orms-and-activerecord/associations/activerecord-associations-video-review
 
 Objects do not know about SQL they know about methods.
