@@ -4,7 +4,9 @@ Objects do not know about SQL they know about methods.
 
 Active Records Associations
 http://guides.rubyonrails.org/association_basics.html
+http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html
 Avi recommends reading
+
 
 belongs_to
 
