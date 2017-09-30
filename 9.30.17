@@ -1,0 +1,33 @@
+Notes from Active Record Videos
+
+Objects do not know about SQL they know about methods.
+
+Active Records Associations
+http://guides.rubyonrails.org/association_basics.html
+Avi recommends reading
+
+belongs_to
+
+to tell if there is a belongs to
+you can look for the foreign key
+ie a song belongs to an artist
+
+http://guides.rubyonrails.org/association_basics.html#belongs-to-association-reference
+
+In all of these methods, association is replaced with the symbol passed as the first argument to belongs_to. For example, given the declaration:
+
+class Book < ApplicationRecord
+  belongs_to :author
+end
+Each instance of the Book model will have these methods:
+
+author
+author=
+build_author
+create_author
+create_author!
+reload_author
+
+
+
+has_many
