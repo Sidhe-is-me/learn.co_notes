@@ -2,3 +2,18 @@ Signed up for Gliffy
 
 Watching video
 https://www.youtube.com/watch?v=WVBWlnUghOI
+
+review rails generate model user name (as an example in video 6:35)
+
+rails generator
+
+rails new
+
+Sinatra generator labs learn
+
+https://github.com/thebrianemory/corneal
+
+
+
+Aliased the user association
+belongs_to :author, class_name => "User"
