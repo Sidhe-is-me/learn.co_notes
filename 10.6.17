@@ -1,0 +1,11 @@
+Sinatra basics:
+Sinatra is a Domain Specific Language implemented in Ruby that's used for writing web
+applications. Created by Blake Mizerany, Sinatra is Rack-based,
+ which means it can fit into any Rack-based application stack, including Rails
+ Essentially, Sinatra is nothing more than some pre-written methods that we can include
+ in our applications to turn them into Ruby web applications.
+
+ OBJECTIVES
+Review gems and how to keep them updated using bundle install
+Describe the purpose of the application controller and app.rb in Sinatra
+Run a Sinatra app by entering rackup app.rb in your terminal
