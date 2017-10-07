@@ -31,3 +31,9 @@ open up http://127.0.0.1:9393/
 
 Please refer back to https://learn.co/tracks/full-stack-web-development-v3/sinatra/sinatra-basics/using-the-shotgun-development-server
 for any errors
+
+
+WHAT ARE ROUTES?
+Every time a person clicks on a link, types in a URL, or submits a form, they are making HTTP requests to a specific URL on your application. Routes are the part of an application that connect HTTP requests to a specific method in your application code built to handle responding to such a request (that part of code is called a Controller Action).
+
+In Sinatra, a route is constructed by pairing an HTTP method/verb, like GET or POST with a URL-matching pattern, i.e. a string that matches what users type in to their browser when they want to visit our webpage. We'll see an example in just a moment.
