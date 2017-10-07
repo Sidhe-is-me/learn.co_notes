@@ -1,0 +1,6 @@
+To start a Sinatra app :
+  rackup app.rb (where app.rb is the name of your app) in the terminal
+
+This should start up a server and then list the local
+server you can look at your app
+eg: localhost:9292
