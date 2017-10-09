@@ -20,4 +20,14 @@ https://youtu.be/0TyCN_oJU3Y?t=2219
 
 Sinatra request cycle
 https://youtu.be/0TyCN_oJU3Y?t=2298
+nice image
   Good to know for debugging - Avi says to memorize
+   A Sinatra Request Cycle
+    1. Client makes HTTP request. Sinatra grabs it and routes it  to the correct application
+            https://youtu.be/0TyCN_oJU3Y?t=2430
+    2. Action asks model for objects
+            https://youtu.be/0TyCN_oJU3Y?t=2643
+    3. Model sends objects to action.
+    6. Action sends objects to view for rendering.
+    7. View responds with HTML
+    8. Controller sends back HTML in HTTP response.
