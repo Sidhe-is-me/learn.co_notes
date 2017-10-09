@@ -1,3 +1,19 @@
 check out Tim Berners lee weaving the web audio book
 
 watch Avi's Sinatra Lecture 2 Review and Forms
+
+Every controller should only have 7 actions
+every controller should be about 1 resource and have no more than 7 actions ( show action , new action, create, edit , update etc) 21.32 in video
+https://youtu.be/0TyCN_oJU3Y?t=1241
+
+
+Route Variables
+https://youtu.be/0TyCN_oJU3Y?t=1331
+
+Query Strings
+https://youtu.be/0TyCN_oJU3Y?t=1411
+
+all user queries will end up in params
+
+good image on types of
+https://youtu.be/0TyCN_oJU3Y?t=2219
