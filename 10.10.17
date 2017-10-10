@@ -8,3 +8,5 @@ Use the Capybara methods visit and page when writing tests.
 Read a Capybara test of response HTML.
 Read a Capybara test that interacts with HTML.
 Read a Capybara test that submits an HTML form.
+
+Nice Image about how there are 3 basic levels of testing that correspond to the different levels of our application in MVC Architecture.
