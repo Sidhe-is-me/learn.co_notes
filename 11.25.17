@@ -1,0 +1,7 @@
+Sinatra Sessions Lab- User Logins
+
+  Build out user log in process
+    requirements
+      user logs in
+      user logs out
+      user only can see their own balance

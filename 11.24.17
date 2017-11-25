@@ -25,14 +25,22 @@ post "/signup"
 end
 
 get '/signup' do
+  erb :signin
+
 
 end
 
 post '/signin'
+  if u = User.find_by_username(params[:username]) && params[:password] !== ""
+  u.password_digest === BCrypt::Engine.hash_secret(params[:password],BCrypt::Engine.generate_salt)
+  end
+  redirect 'signin'
 
 end
 
 
 post '/logout' do
-
+   session[:username].delete
+   session[:username] = ""
+   redirect "/"
 end
