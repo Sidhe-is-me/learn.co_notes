@@ -1,6 +1,6 @@
 Cheatsheet
 
-Here is a reference list of the most commonly used git commands (you might consider bookmarking this handy webpage). Try to familiarise yourself with the commands and then eventually remember them:
+Here is a reference list of the most commonly used git commands (you might consider bookmarking this handy webpage). Try to familiarize yourself with the commands and then eventually remember them:
 
 Commands related to remote repository:
 git clone https://github.com/user-name/repository-name.git

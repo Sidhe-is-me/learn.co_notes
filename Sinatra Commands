@@ -1,3 +1,6 @@
+
+http://sinatrarb.com/intro.html
+
 To start a Sinatra app :
   rackup app.rb
       (where app.rb is the name of your app) in the terminal
