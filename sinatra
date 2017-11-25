@@ -11,7 +11,7 @@ when starting an app the code is read once on boot
 and then never again.
 
 cntrl + c
-  will shut down the local serve
+  will shut down the local server
 so that you can reload the code
 
 In order to stop the tedious save stop and restart
