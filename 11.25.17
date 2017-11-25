@@ -5,3 +5,9 @@ Sinatra Sessions Lab- User Logins
       user logs in
       user logs out
       user only can see their own balance
+
+
+New Concepts
+  Helper Methods
+    Helper methods are methods that are written in the controller and are accessible in the views and provide some logical support.
+    It is important to note that helper methods can be used for a lot more than just tracking whether a user is logged in and who the current user is. Helpers are methods that make it cleaner to add logic to our views. 
