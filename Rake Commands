@@ -12,6 +12,21 @@ class CreateDogs < ActiveRecord::Migration
     end
 3. Run rake db:migrate to create the table in the schema file.
 
+PER ENOCH- add to rake file
+
+task :console do
+  Pry.start
+end
+
+task :drop do
+  system('rm db/development.sqlite && rm db/test.sqlite && rm db/schema.rb')
+end
+
+task :migrations do
+  system('rake db:migrate && rake db:migrate SINATRA_ENV=test')
+end
+
+if you run rake console, rake drop or rake migrations these will execute the code above.
 
 
 OBJECTIVES
@@ -121,3 +136,6 @@ class CreateDogs < ActiveRecord::Migration
 
 end
 While the rollback (down) method is not included, it's implicit in the change method. Rolling back the database would work in exactly the same way as using the down method.
+
+
+TESTING
