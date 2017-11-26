@@ -206,10 +206,7 @@ Take a look at the file structure in this directory. It's okay if it feels overw
     IDE Browser Container
 OPEN
 Sinatra Views
-2 STUDENTS WORKING
 
-Sidhe-is-me
-scottibe
 OVERVIEW
 We'll explore the purpose of views in a Sinatra application and will render them as separate files.
 OBJECTIVES
