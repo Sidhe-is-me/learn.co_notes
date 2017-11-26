@@ -1,6 +1,7 @@
 https://learn.co/tracks/full-stack-web-development-v3/sinatra/activerecord/activerecord-setup-in-sinatra
 
 1. rake db:create_migration NAME=create_tables
+
 2. go into file this created and code the table info you need eg.
 class CreateDogs < ActiveRecord::Migration
     def change

@@ -1,2 +1,8 @@
+
 learn --f-f
- rspec --f-f
+
+rspec --f-f
+
+if the above does not work try this :
+
+rspec --fail-fast

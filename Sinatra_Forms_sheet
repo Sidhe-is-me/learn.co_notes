@@ -1,0 +1,59 @@
+https://github.com/matt297/sinatra-dev-cheatsheet#sinatra
+Very good link to easy cheatsheet for Sinatra
+
+
+
+
+
+
+https://learn.co/tracks/full-stack-web-development-v3/sinatra/forms/html-forms-and-params
+
+
+HTML forms need a <form> opening tag and a </form> closing tag.
+
+Each form field (text, date, password, etc) has a tag (usually <input>) with an attribute type denoting the type of form field. For example, a text box field looks like this:
+
+<input type="text">
+
+A form needs a submit button:
+
+<input type="submit">
+
+That's all a basic form needs!
+
+<form>
+  <p>Your Name: <input type="text"></p>
+  <p>Your Favorite Food: <input type="text"></p>
+  <input type="submit">
+</form>
+
+CONNECTING THE FORM TO YOUR SINATRA APP
+
+In order to connect the form to our application, we need to give it explicit directions on where and how to send the data from the user. Both of these pieces of data are attributes that we give our <form> tag.
+
+<form method="POST" action="/food">
+
+The method attribute tells the form what kind of request should be fired to the server when the submit button is clicked. In general, forms use POST request, because it is 'posting' data to the server
+
+The action attribute tells the form what specific route the post request should be sent to. In this case, we're posting to a route called /food
+.
+Each form field <input> also must define a name attribute. The name attribute of an <input> defines how our application will identify each <input> data.
+
+<form method="POST" action="/food">
+  <p>Your Name: <input type="text" name="name"></p>
+  <p>Your Favorite Food: <input type="text" name="favorite_food"></p>
+  <input type="submit">
+</form>
+
+Let's see what happens when we submit this form.
+We get a Sinatra error! This is great news. Sinatra errors tell us exactly what we need to do next to make the form work
+
+POST ROUTES AND PARAMS
+Every form also needs a corresponding route in the controller file (app.rb). Instead of a get route (which we used to route users to view an html page), we'll set up a post route:
+
+post '/food' do
+
+end
+
+
+  Notice that both of the attributes from the form are covered in this route: The method post and the action /food. It's almost like a game of catch - the form is throwing the data to the server, which catches it by having the same receiving address (/food) and way of receiving the data (post).
