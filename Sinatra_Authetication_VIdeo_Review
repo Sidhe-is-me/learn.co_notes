@@ -1,0 +1,7 @@
+Most important file in an application is the Config.ru
+https://youtu.be/_S1s6R-_wYc?t=83
+
+1st thing it needs to do is load an environment
+
+what does this app need to do
+this is where all our requires go
