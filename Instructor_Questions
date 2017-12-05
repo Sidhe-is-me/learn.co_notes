@@ -1,0 +1,39 @@
+CS Track-
+
+  Recursion Lesson-
+    I am assuming that just because they are using JS does not mean that this only works for JS.
+
+    I am not following the example sumuptofive with the parentheses
+
+
+    Sinatra Playlister
+    Showing that I created 2 artist and 2 song tables? How do I check this
+
+    [16:18:13] (master) playlister-sinatra-v-000
+// ♥ rake drop
+[16:20:38] (master) playlister-sinatra-v-000
+// ♥ rake migrations
+== 20171204211648 Artists: migrating ==========================================
+-- create_table(:artists)
+   -> 0.0027s
+== 20171204211648 Artists: migrated (0.0030s) =================================
+
+== 20171204211655 Songs: migrating ============================================
+-- create_table(:songs)
+   -> 0.0026s
+== 20171204211655 Songs: migrated (0.0037s) ===================================
+
+== 20171204211648 Artists: migrating ==========================================
+-- create_table(:artists)
+   -> 0.0020s
+== 20171204211648 Artists: migrated (0.0022s) =================================
+
+== 20171204211655 Songs: migrating ============================================
+-- create_table(:songs)
+   -> 0.0013s
+== 20171204211655 Songs: migrated (0.0014s) ===================================
+
+[16:21:09] (master) playlister-sinatra-v-000
+// ♥ rspec spec/models/01_artist_spec.rb
+D, [2017-12-04T16:21:47.310734 #26755] DEBUG -- :   ActiveRecord::SchemaMigration Load (0.2ms)  SELECT "schema_migrations".* FROM "schema_migrations"
+Run options: include {:focus=>true}

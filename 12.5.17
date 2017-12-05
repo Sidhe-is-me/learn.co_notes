@@ -1,0 +1,2 @@
+Note about db-
+when setting up Db- It is ok to modify the migration file but only when setting up. After data is set in DB use migrations to update and change a table.
