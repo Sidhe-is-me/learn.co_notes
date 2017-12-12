@@ -1,0 +1,20 @@
+fizz_buzz =
+    (1..20).map do |i|
+        case
+        when i % 15 == 0 then "FizzBuzz"
+        when i % 3 == 0 then "Fizz"
+        when i % 5 == 0 then "Buzz"
+        else i
+        end
+    end
+puts fizz_buzz
+
+
+Fibonacci from 1-10
+    def fib(n)
+      return n if n < 2
+
+      fib(n-1) + fib(n-2)
+    end
+
+    (1..10).each { |n| puts fib(n) }
