@@ -1,0 +1,43 @@
+GENERATING A NEW RAILS APPLICATION
+Our application is going to be called BlogFlash. To create the application, run the following command:
+
+rails new blog-flash
+
+There are a number of common naming conventions for Rails app names. Typically you will want to use all lower case letters, separated by '-', as shown in our blog-flash naming structure. In the same way that there are rules for naming methods, variables, classes, etc. in Ruby, there are naming rules for application names. Since the application name is used as the app constant and throughout the application, the best approach is to keep your naming simple and to follow a standard naming practice.
+CREATING THE DATABASE
+Before we can startup the rails server, first you can create the database by running:
+
+rake db:create
+
+STARTING UP THE RAILS SERVER
+To startup the Rails server, make sure that you are in the root of the application in the terminal and run:
+
+rails s
+
+This will startup the rails server and you will see output such as the following:
+
+=> Booting WEBrick
+=> Rails 4.2.3 application starting in development on
+
+http://localhost:3000
+
+=> Run `rails server -h` for more startup options
+=> Ctrl-C to shutdown server
+[2015-11-14 22:16:54] INFO  WEBrick 1.3.1
+[2015-11-14 22:16:54] INFO  ruby 2.1.2 (2014-05-08) [x86_64-darwin13.0]
+[2015-11-14 22:16:54] INFO  WEBrick::HTTPServer#start: pid=3080 port=3000
+Now that the server is running properly, you can verify that it's working properly in the browser by navigating to http://localhost:3000/.
+
+Here you will see the 'Yay! You're on Rails!' page that ships with Rails. It shows that we're ready to start building the application!
+
+
+USING THE RAILS CONSOLE
+The Rails console is an important tool in the arsenal of any Rails developer. It gives you a direct connection to your application's ecosystem and lets you perform tasks such as:
+
+Running database queries
+Running application code
+Performing full CRUD tasks with the database
+Allowing you to switch between making permanent database changes and running in a sandbox mode to test scripts out
+To start up the Rails console, run the following command in the terminal:
+
+rails c
