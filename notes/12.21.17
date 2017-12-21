@@ -26,3 +26,76 @@ A typical model file will contain code such as but not limited to the following:
 - callbacks
 - custom algorithms
 If any/all of the items above are not familiar to you yet don't worry. We will cover them in future lessons. Its important to have an idea of what can me included in a model file, even at this early stage.
+
+CREATING AN ACTIVE RECORD Model
+
+As a professional Rails dev, you will be expected to build applications by leveraging a BDD process. (Behavior Driven Development http://rspec.info/
+SO we will walk through how to build each feature with a test first approach so that the tests can lead our development.
+However please focus on the implementation code so that you can get a firm understanding of how to build a model, database table etc.
+
+In order to get started we will first create an RSpec test.
+
+To generate this app we installed the Rails gem then ran
+
+# the -T flag tells the Rails project generator not to
+# include TestUnit, the default testing framework:
+rails new rails-activerecord-models-and-rails-readme -T
+
+# The Rails project generator created this directory for us:
+cd rails-activerecord-models-and-rails-readme
+
+# We modified the Gemfile to include
+# gem 'rspec-rails', '~> 3.0'
+# in the :development, :test group, then ran:
+
+bundle install
+
+# Finally, we created the initial RSpec config:
+rails g rspec:install
+
+
+Lets create a new file : spec/models/post_spec.rb
+In that file place the following code:
+
+    require 'rails_helper'
+    describe Post do
+    end
+
+    if we run bundle exec rspec, it will throw an error since we don't have any code in the application for our Post model yet.
+    To fix this, create a new file in the app/models dir called post.rb, and add the following code:
+      class post
+      end
+
+    This will get the test passing but it still ahs some weird errors because we need to create a schema file. you can do that by running
+
+    rake db:migrated
+    There is no need to create a database with rake db:create Firstthe test suite will create a test database for us when we run our tests This will create the schema file and clear the warning. Now update the Post spec to test for a Post being create. It should look something like this:
+
+    describe Post do
+      it 'can be created' do
+        post = Post.create!(title: "My title", description: "The post description")
+        expect(post).to be_valid
+      end
+      end
+
+    Running this test gives us the error of
+  undefined method create! for Post:class
+
+  To implement this feature lets create the database table for our posts. Create a new dir in the db/ dir called migrate, and add a new file called  001_create_posts.rb  To that file add the following code:
+  class CreatePosts < ActiveRecord::Migration
+        def change
+          create_table :posts do |t|
+            t.string :title
+            t.text :description
+
+            t.timestamps null: false
+          end
+        end
+      end
+This is a basic migration that will create a posts table that will have the title and description columns, along with the built in timestamps.
+
+This migration follows the standard naming vonvention. When you want to create a table, the migrations class name should reflect that: hence CreatePosts.
+This is then reiterated by the :posts argument passed to the create_table method.
+the filename itself needs to be unique and when you generate a migration automatically throught a model or scaffold generator you will notice that the migration file name is prepended with a timestamp value to make sure there are no duplicate miagration files.
+
+After running rake db:migrate
