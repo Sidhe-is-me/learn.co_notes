@@ -1,0 +1,4 @@
+in 200 Toy Thomas fielding was frustrated by the haphazard ways in with web applications were using the HTTP standard. So in his dissertation he came up with REST- Representational State Transfer.
+
+if you have been building applications for a while there is a good chance that you have already worked with RESTfull API's.
+4Integrating a facebook login having something in your application post to Twitter, Pulling in a feed of images from Insta or even calling a list of locations from Google maps are all examples of using RESTfull API to communicate between apps.
