@@ -94,8 +94,8 @@ In that file place the following code:
       end
 This is a basic migration that will create a posts table that will have the title and description columns, along with the built in timestamps.
 
-This migration follows the standard naming vonvention. When you want to create a table, the migrations class name should reflect that: hence CreatePosts.
+This migration follows the standard naming convention. When you want to create a table, the migrations class name should reflect that: hence CreatePosts.
 This is then reiterated by the :posts argument passed to the create_table method.
-the filename itself needs to be unique and when you generate a migration automatically throught a model or scaffold generator you will notice that the migration file name is prepended with a timestamp value to make sure there are no duplicate miagration files.
+the filename itself needs to be unique and when you generate a migration automatically thought a model or scaffold generator you will notice that the migration file name is prepended with a timestamp value to make sure there are no duplicate migration files.
 
 After running rake db:migrate
