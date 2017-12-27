@@ -1,0 +1,9 @@
+
+Method	Action	Description
+GET	/newsletters	Show all newsletters
+POST	/newsletters	Create a new newsletter
+GET	/newsletters/new	Render the form for creating a new newsletter
+GET	/newsletters/:id/edit	Render the form for editing a newsletter
+GET	/newsletters/:id	Show a single newsletter
+PATCH	/newsletters/:id	Update a newsletter
+DELETE	/newsletters/:id	Delete a newsletter

@@ -2,3 +2,36 @@ in 200 Toy Thomas fielding was frustrated by the haphazard ways in with web appl
 
 if you have been building applications for a while there is a good chance that you have already worked with RESTfull API's.
 4Integrating a facebook login having something in your application post to Twitter, Pulling in a feed of images from Insta or even calling a list of locations from Google maps are all examples of using RESTfull API to communicate between apps.
+
+Let's take a look at a practical example of how this works. If we want to build out a newsletter feature, we would need the system to have four key actions – Create, Read, Update, and Destroy – commonly known as 'CRUD' actions. In addition to the CRUD actions, we will also need an index page that lists out all of our newsletters – that's our fifth route. Since our users will need to have a visual interface for creating and updating records (a form for creating and another form for updating), we will need two more routes. Putting all of that together, you will see that we end up needing seven different routes. The GET routes are all routes that usually render some erb content to a web browser. These are the routes that our users will work with everyday. The POST and PUT are the url in the form action, and the DELETE is a new type of verb.
+
+Method	Action	Description
+GET	/newsletters	Show all newsletters
+POST	/newsletters	Create a new newsletter
+GET	/newsletters/new	Render the form for creating a new newsletter
+GET	/newsletters/:id/edit	Render the form for editing a newsletter
+GET	/newsletters/:id	Show a single newsletter
+PATCH	/newsletters/:id	Update a newsletter
+DELETE	/newsletters/:id	Delete a newsletter
+
+https://curriculum-content.s3.amazonaws.com/web-development/rails-intro-to-rest/rails_routes.png
+DEFINITION OF HTTP VERBS
+So what do GET, POST, et al. represent? Those are HTTP verbs that each give the HTTP request unique behavior. Below is an explanation of each verb:
+
+GET - The GET method retrieves whatever information is identified by the Request URI. This means if you go to /posts, you will get all of the posts that the application wants your application to have.
+
+POST - The POST method is used to send data enclosed in the request to the server. The server is expected to use this data to create some new resource.
+
+PATCH/PUT - The PUT/PATCH methods both represent the HTTP verbs that are used to update existing resources. So if you sent a PUT request to /posts/1 with a new post name, the post with an id of 1 would be updated.
+
+DELETE - The DELETE method requests that the server delete the resource identified by the Request URI. This means… that it deletes the record. It's nice and explicit.
+
+
+SUMMARY
+Below are a few keys to remember when thinking about REST:
+
+REST is an architectural design pattern, not a framework or code in itself. Many other web frameworks utilize RESTful design principles in some form or another. By using RESTful principles, Rails apps are able to have a clear and standardized naming structure for routes and actions.
+
+RESTful routes have a clear mapping between the URL resource and the corresponding controller actions.
+
+There are seven potential RESTful route options available.
