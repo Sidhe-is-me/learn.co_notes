@@ -1,3 +1,5 @@
+pry-rails
+
 GENERATING A NEW RAILS APPLICATION
 Our application is going to be called BlogFlash. To create the application, run the following command:
 
