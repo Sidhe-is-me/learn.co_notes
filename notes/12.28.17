@@ -1,0 +1,4 @@
+Route helper methods are more dynamic since they are METHODS and not simply strings. This means that if something changes with the route there are many cases where the code itself will not need to change.
+Route helper methods can help clean up the view and controller code and assist with readability.
+-You CAN NOT use these helper methods in your model files.
+Route Helpers translate directly into html friendly paths.
